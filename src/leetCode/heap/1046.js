@@ -20,7 +20,7 @@
  */
 import PriorityQueue from './PriorityQueue';
 
-// 第一种解法：大顶堆
+// 题解一：大顶堆
 const lastStoneWeight = function (stones) {
     const pQueue = new PriorityQueue(stones, (a, b) => b - a);
     while (pQueue.size() > 1) {
@@ -35,7 +35,7 @@ const lastStoneWeight = function (stones) {
 console.log(lastStoneWeight([1, 3]));
 
 
-// 第二种解法：排序，二分插入
+// 题解二：排序，二分插入
 const lastStoneWeight1 = function (stones) {
     const binarySearch = (array, value) => {
         const { length } = array;
