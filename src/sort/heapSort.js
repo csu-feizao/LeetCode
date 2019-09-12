@@ -68,7 +68,7 @@ class HeapSort extends Base {
         const temp = this.array[index];
         let child = (index + 1) * 2 - 1;
         while (child <= end) {
-            if (child < end && this.shouldSwap(this.array[child], this.array[child + 1])) {
+            if (child < end && this.shouldSwap(child, child + 1)) {
                 child++;
             }
             if (this.compare(temp, this.array[child]) <= 0) break;
