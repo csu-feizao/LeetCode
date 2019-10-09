@@ -2,9 +2,15 @@ import Base from './base';
 
 class QuickSort extends Base {
     constructor(array, compare, maxLengthInsertSort = 7) {
-        super(array, compare);
+        super(array, compare, maxLengthInsertSort);
 
         this.maxLengthInsertSort = maxLengthInsertSort;
+    }
+
+    validate(...args) {
+        super.validate(...args);
+        const [, , maxLengthInsertSort] = args;
+        if (!Number.isInteger(maxLengthInsertSort) || maxLengthInsertSort < 2) throw new Error('maxLengthInsertSort is not a correct value');
     }
 
     sort() {
