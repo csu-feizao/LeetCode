@@ -2,7 +2,7 @@ import Base from './base';
 
 class MergeSort extends Base {
     sort() {
-        if (!this.array || this.array.length < 2) return this.array;
+        if (this.array.length < 2) return this.array;
 
         const { length } = this.array;
         return this._sort(this.array, this.array, 0, length - 1)

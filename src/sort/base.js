@@ -1,7 +1,14 @@
 class Base {
-    constructor(array = [], compare = (a, b) => a - b) {
+    constructor(...args) {
+        this.validate(...args);
+
+        const [array = [], compare = (a, b) => a - b] = args;
         this.array = array;
         this.compare = compare;
+    }
+
+    validate(array) {
+        if (!Array.isArray(array)) throw new Error('The first argument should be an [Array]');
     }
 
     shouldSwap(a, b) {

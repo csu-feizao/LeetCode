@@ -2,7 +2,7 @@ import Base from './base';
 
 class InsertSort extends Base {
     sort() {
-        if (!this.array || this.array.length < 2) return this.array;
+        if (this.array.length < 2) return this.array;
 
         const { length } = this.array;
         for (let i = 1; i < length; i++) {

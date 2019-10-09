@@ -8,7 +8,7 @@ class QuickSort extends Base {
     }
 
     sort() {
-        if (!this.array || this.array.length < 2) return this.array;
+        if (this.array.length < 2) return this.array;
 
         const { length } = this.array;
         this._qSort(0, length - 1);

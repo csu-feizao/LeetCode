@@ -2,7 +2,7 @@ import Base from './base';
 
 class BubbleSort extends Base {
     sort() {
-        if (!this.array || this.array.length < 2) return this.array;
+        if (this.array.length < 2) return this.array;
 
         const { length } = this.array;
         let isChange = true;

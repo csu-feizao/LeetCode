@@ -8,7 +8,7 @@ class HeapSort extends Base {
     }
 
     sort() {
-        if (!this.array || this.array.length < 2) return this.array;
+        if (this.array.length < 2) return this.array;
         const { length } = this.array;
         for (let i = length - 1; i > 0; i--) {
             this.swap(0, i);
