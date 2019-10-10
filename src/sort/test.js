@@ -17,7 +17,6 @@ const quickSort = new Sort.QuickSort([1, 8, 4, 6, 10, 4, 9, 2, 1]);
 console.log(quickSort.sort());
 
 
-
 // var bubbleSort = (array) => {
 //     for (var i = array.length - 1; i >= 0; i--) {
 //         var flag = false;
@@ -87,4 +86,68 @@ console.log(quickSort.sort());
 //     console.log(array)
 // }
 //
-// shellSort([1, 8, 4, 6, 10, 4, 9, 2, 1])
+// var mergeSort = (array) => {
+//     var _sort = (origin, result, start, end) => {
+//         var arr = [];
+//         if (start === end) {
+//             result[start] = origin[end];
+//         } else {
+//             var mid = Math.floor((start + end) / 2);
+//             _sort(origin, arr, start, mid);
+//             _sort(origin, arr, mid + 1, end);
+//             _merge(arr, result, start, mid, end);
+//         }
+//         return result;
+//     };
+//     var _merge = (origin, result, start, mid, end) => {
+//         var i = start;
+//         var j = mid + 1;
+//         while (start <= mid && j <= end) {
+//             if (origin[start] > origin[j]) {
+//                 result[i++] = origin[j++];
+//             } else {
+//                 result[i++] = origin[start++];
+//             }
+//         }
+//         while (start <= mid) {
+//             result[i++] = origin[start++];
+//         }
+//         while (j <= end) {
+//             result[i++] = origin[j++];
+//         }
+//     };
+//     _sort(array, array, 0, array.length - 1);
+//     console.log('merge sort', array)
+// }
+//
+// var quickSort = (array) => {
+//     var _sort = (start, end) => {
+//         if (start < end) {
+//             var [p1, p2] = partition(start, end);
+//             _sort(start, p1 - 1);
+//             _sort(p2 + 1, end);
+//         }
+//     }
+//     var partition = (start, end) => {
+//         var cur = start + 1;
+//         var pivotVal = array[start];
+//         while (cur <= end) {
+//             if (array[cur] === pivotVal) {
+//                 cur++;
+//             } else if (array[cur] < pivotVal) {
+//                 [array[start], array[cur]] = [array[cur], array[start]];
+//                 cur++;
+//                 start++;
+//             } else {
+//                 [array[cur], array[end]] = [array[end], array[cur]];
+//                 end--;
+//             }
+//         }
+//         // array[start] = pivotVal;
+//         return [start, end];
+//     }
+//     _sort(0, array.length - 1);
+//     console.log('quick sort', array)
+// }
+//
+// quickSort([1, 8, 4, 6, 10, 4, 9, 2, 1])

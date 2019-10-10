@@ -22,12 +22,13 @@ class MergeSort extends Base {
     }
 
     _merge(origin, result, front, mid, end) {
-        let i, j;
-        for (i = front, j = mid + 1; front <= mid && j <= end; i++) {
+        let i = front;
+        let j = mid + 1;
+        while (front <= mid && j <= end) {
             if (this.compare(origin[front], origin[j]) > 0) {
-                result[i] = origin[j++];
+                result[i++] = origin[j++];
             } else {
-                result[i] = origin[front++];
+                result[i++] = origin[front++];
             }
         }
         while (front <= mid) {
