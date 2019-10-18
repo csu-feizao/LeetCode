@@ -10,12 +10,16 @@ Function.prototype[bind] = function (context, ...preArgs) {
     }
     const key = Symbol();
     context[key] = this;
-    return function bindFunc(...args) {
+    const bindFunc = function (...args) {
         if (this instanceof bindFunc) {
             return new context[key](...preArgs, ...args);
         }
         return context[key](...preArgs, ...args);
+    };
+    if (this.prototype) {
+        bindFunc.prototype = Object.create(this.prototype);
     }
+    return bindFunc;
 };
 
 function f(name, age) {
