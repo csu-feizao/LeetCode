@@ -1,6 +1,6 @@
 import { isEmpty, isNode } from './utils';
 
-const call = Symbol('call');
+export const call = Symbol('call');
 
 Function.prototype[call] = function (context, ...args) {
     if (isEmpty(context)) {
