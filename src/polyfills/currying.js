@@ -1,18 +1,16 @@
-const curring = (fn) => {
-    const argList = [];
-    const func = function (...args) {
-        if (args.length === 0) {
-            return fn.apply(this, argList);
-        } else {
-            [].push.apply(argList, args);
-            return func;
-        }
-    };
-    return func;
+const currying = function (fn, ...args) {
+    if (fn.length <= args.length) {
+        return fn(...args);
+    }
+    return function (...args1) {
+        return currying(fn, ...args, ...args1)
+    }
 };
 
-const reduceFn = fn => (...args) => args.reduce((pre, cur) => {
-    return fn(pre, cur);
-});
-const sum = (a, b) => a + b;
-console.log(curring(reduceFn(sum))(1)(2)(3)(4)());
+
+const add = (a, b, c) => {
+    return a + b + c;
+};
+
+const curryingAdd = currying(add);
+console.log(curryingAdd(1)(2, 3));
