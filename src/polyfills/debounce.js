@@ -1,10 +1,17 @@
-const debounce = (fn, time) => {
+const debounce = (fn, time, immediate = true) => {
     let timeout;
     return function (...args) {
         if (timeout) {
             clearTimeout(timeout);
+        } else if (immediate) {
+            fn.apply(this, args);
         }
-        timeout = setTimeout(fn.bind(this, ...args), time);
+        timeout = setTimeout(() => {
+            timeout = null;
+            if (!immediate) {
+                fn.bind(this, ...args)
+            }
+        }, time);
     }
 };
 
