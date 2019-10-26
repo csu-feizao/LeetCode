@@ -32,7 +32,7 @@ const deepClone = (() => {
                     return result;
                 case 'Map':
                     for (const [key, val] of obj) {
-                        result.set(key, _clone(val, map));
+                        result.set(_clone(key, map), _clone(val, map));
                     }
                     return result;
                 default:
