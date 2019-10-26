@@ -150,4 +150,42 @@ console.log(quickSort.sort());
 //     console.log('quick sort', array)
 // }
 //
-// quickSort([1, 8, 4, 6, 10, 4, 9, 2, 1])
+// var heapSort = array => {
+//     const { length } = array;
+//     const sort = arr => {
+//         makeHeap(arr);
+//
+//         for (let i = length - 1; i >= 0; i--) {
+//             swap(0, i);
+//             siftDown(0, i - 1);
+//         }
+//     };
+//
+//     const makeHeap = arr => {
+//         for (let i = Math.floor(length / 2); i >= 0; i--) {
+//             siftDown(i, length - 1);
+//         }
+//     };
+//
+//     const swap = (i, j) => [array[i], array[j]] = [array[j], array[i]];
+//
+//     const siftDown = (start, end) => {
+//         let child = start * 2 + 1;
+//         const temp = array[start];
+//         while (child <= end) {
+//             if (child < end && array[child + 1] > array[child]) {
+//                 child++;
+//             }
+//             if (temp >= array[child])
+//                 break;
+//             array[start] = array[child];
+//             start = child;
+//             child = child * 2 + 1;
+//         }
+//         array[start] = temp;
+//     };
+//
+//     sort(array);
+//     console.log(array);
+// };
+// heapSort([1, 8, 4, 6, 10, 4, 9, 2, 1])
