@@ -45,9 +45,11 @@ const inherits4 = (Child, Parent) => {
 };
 
 
-function Child() {}
-
 function Parent() {}
+
+function Child() {
+    Parent.call(this);
+}
 
 inherits4(Child, Parent);
 console.log((new Child()) instanceof Parent)
