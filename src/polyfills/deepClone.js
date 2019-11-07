@@ -11,11 +11,12 @@ const deepClone = (() => {
 
     return function _clone(obj, map = new WeakMap()) {
         if (!isObject(obj)) return obj;
-        if (map.has(obj)) return map.get(obj);
 
         const type = getType(obj);
 
         if (deepTags.includes(type)) {
+            if (map.has(obj)) return map.get(obj);
+
             const result = init(obj);
             map.set(obj, result);
             switch (type) {
@@ -49,11 +50,11 @@ const deepClone = (() => {
             case 'Boolean':
             case 'Number':
             case 'String':
+            case 'Symbol':
+                return Object(obj.valueOf());
             case 'Error':
             case 'Date':
                 return init(obj, obj.valueOf());
-            case 'Symbol':
-                return Object(obj.valueOf());
             case 'Function':
                 return obj;
             case 'RegExp':
