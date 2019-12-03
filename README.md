@@ -1,0 +1,43 @@
+### | [js实现原理](https://github.com/csu-feizao/LeetCode/tree/master/src/polyfills)
+#### 1. [实现apply函数](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/apply.js)
+#### 2. [实现call函数](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/call.js)
+#### 3. [实现bind函数](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/bind.js)
+#### 4. [实现map函数](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/map.js)
+#### 5. [实现async函数](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/async.js)
+#### 6. [实现redux的compose函数](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/compose.js)
+#### 7. [实现Object.create](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/create.js)
+#### 8. [实现函数柯里化](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/currying.js)
+#### 9. [实现uncurrying](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/unCurrying.js)
+#### 10. [实现函数防抖](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/debounce.js)
+#### 11. [实现函数节流](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/throttle.js)
+#### 12. [实现深拷贝](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/deepClone.js)
+#### 13. [实现new](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/new.js)
+#### 14. [实现instanceof](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/instanceof.js)
+#### 15. [实现寄生式组合继承](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/inherits.js)
+#### 16. [实现es6类的继承](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/extends.js)
+#### 17. [实现for of遍历对象](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/for-of.js)
+#### 18. [实现Promise](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/promise.js)
+#### 19. [实现通过路径取值](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/getValueByPath.js)
+#### 20. [实现通过路径赋值](https://github.com/csu-feizao/LeetCode/blob/master/src/polyfills/setValueByPath.js)
+
+### | [排序](https://github.com/csu-feizao/LeetCode/tree/master/src/sort)
+#### 1. [冒泡排序](https://github.com/csu-feizao/LeetCode/blob/master/src/sort/bubbleSort.js)
+#### 2. [选择排序](https://github.com/csu-feizao/LeetCode/blob/master/src/sort/selectSort.js)
+#### 3. [插入排序](https://github.com/csu-feizao/LeetCode/blob/master/src/sort/insertSort.js)
+#### 4. [堆排序](https://github.com/csu-feizao/LeetCode/blob/master/src/sort/heapSort.js)
+#### 5. [归并排序](https://github.com/csu-feizao/LeetCode/blob/master/src/sort/mergeSort.js)
+#### 6. [希尔排序](https://github.com/csu-feizao/LeetCode/blob/master/src/sort/shellSort.js)
+#### 7. [快速排序](https://github.com/csu-feizao/LeetCode/blob/master/src/sort/quickSort.js)
+
+### | [设计模式](https://github.com/csu-feizao/LeetCode/tree/master/src/designPattern)
+#### 1. [单例模式](https://github.com/csu-feizao/LeetCode/blob/master/src/designPattern/singleton.js)
+#### 2. [发布订阅模式](https://github.com/csu-feizao/LeetCode/blob/master/src/designPattern/publishSubscribe.js)
+
+### | [LeetCode](https://github.com/csu-feizao/LeetCode/tree/master/src/leetCode)
+#### 1. [树的非递归遍历相关](https://github.com/csu-feizao/LeetCode/blob/master/src/leetCode/tree/144.js)
+#### 2. [最大最小堆相关](https://github.com/csu-feizao/LeetCode/tree/master/src/leetCode/heap)
+#### 3. [动态规划相关](https://github.com/csu-feizao/LeetCode/tree/master/src/leetCode/dp)
+
+
+
+
