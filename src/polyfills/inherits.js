@@ -9,7 +9,7 @@ const inherits = (Child, Parent) => {
 const inherits1 = (Child, Parent) => {
     function New(constructor, ...args) {
         const obj = {};
-        obj.__proto__ = Parent.prototype;
+        obj.__proto__ = constructor.prototype;
         const ret = constructor.apply(this, args);
         return ret instanceof Object ? ret : obj;
     }
