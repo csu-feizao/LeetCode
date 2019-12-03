@@ -1,12 +1,10 @@
 // Object.prototype[Symbol.iterator] = function () {
-//     const entries = Object.entries(this);
-//     const { length } = entries;
 //     let index = 0;
-//     let done = index >= length;
+//     const isDone = () => index >= Object.entries(this).length;
 //     return {
 //         next: () => {
-//             let value = done ? undefined : entries[index];
-//             done = index >= length;
+//             const done = isDone();
+//             let value = done ? undefined : Object.entries(this)[index];
 //             index = done ? index : index + 1;
 //             return { value, done };
 //         }
@@ -14,14 +12,15 @@
 // };
 
 Object.prototype[Symbol.iterator] = function* () {
-    const entries = Object.entries(this);
-    const { length } = entries;
-    for (let i = 0; i < length; i++) {
-        yield entries[i];
+    for (let i = 0; i < Object.entries(this).length; i++) {
+        yield Object.entries(this)[i];
     }
 };
 
 let obj = { a: 1, b: 2, c: 3};
 for (let [key, val] of obj) {
     console.log('a', key, val);
+    if (key === 'a') {
+        obj.d = 4;
+    }
 }
